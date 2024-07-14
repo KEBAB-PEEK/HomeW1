@@ -1,0 +1,11 @@
+# task 1
+my_string = input('Введите текст: ')
+print('Количество введенных символов:', len(my_string))
+
+# task 2
+my_string = input('Введите текст: ')
+print('Ваш текст в ВЕРХНЕМ регистре –', my_string.upper())
+print('Ваш текст в ниженем регистре –', my_string.lower())
+print('Ваш текст без пробелов –', my_string.replace(' ', ''))
+print('Первый символ –', my_string[0:1])
+print('Последний символ –', my_string[-1])
