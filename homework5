@@ -1,0 +1,10 @@
+immutable_var = 1, 2, 'Food', True
+print(immutable_var)
+    #immutable_var[0] = 2
+    #print(immutable_var)
+    #Выдаст ошибку, тк кортеж не поддерживает обращения к элементам
+    #Так же он создан для хранения списка, который должен быть неизменным
+mutable_list = [1, 2, 'Apple', False]
+print(mutable_list)
+mutable_list[3] = True
+print(mutable_list)
