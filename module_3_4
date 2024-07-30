@@ -1,0 +1,14 @@
+def single_root_words(root_word, *other_word):
+    same_word = list()
+    list_words = list(other_word)
+    lowercase_list = [s.lower() for s in list_words]
+    root_word_lower = root_word.lower()
+    for key in range(len(lowercase_list)):
+        if (root_word_lower in lowercase_list[key]) or (lowercase_list[key] in root_word_lower):
+            same_word.append(list_words[key])
+    return same_word
+
+result1 = single_root_words('Брат', 'паниБрат', 'братия', 'акРобАт', 'по-брАтски', 'Горбат', )
+print(result1)
+result2 = single_root_words('Ворон', 'ворона', 'вороненок', 'проВОРОНить', 'провоРен' )
+print(result2)
