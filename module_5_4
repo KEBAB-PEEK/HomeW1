@@ -2,16 +2,13 @@ class House:
     houses_history = []
 
     def __new__(cls, *args, **kwargs):
-        instance = object.__new__(cls)
-        args = args[0]
-        cls.houses_history.append(args)
-        return instance
+        house_name = args[0]
+        cls.houses_history.append(house_name)
+        return super().__new__(cls)
 
     def __init__(self, name, number_of_floors):
         self.name = name
         self.number_of_floors = number_of_floors
-        if isinstance(number_of_floors, House):
-            self.houses_history = number_of_floors.append()
 
     def go_to(self, new_floor):
         if 0 < new_floor <= self.number_of_floors:
@@ -21,7 +18,7 @@ class House:
                 print('Такого этаже не существует')
 
     def __del__(self):
-        return print(f'{self.name} снесён, но он останется в истории')
+        print(f'{self.name} снесён, но он останется в истории')
 
     def __len__(self):
         return self.number_of_floors
